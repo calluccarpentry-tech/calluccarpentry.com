@@ -1,0 +1,10 @@
+(globalThis["webpackChunk_canva_web"] = globalThis["webpackChunk_canva_web"] || []).push([[86740],{
+
+/***/ 159315:
+function(_,__,__webpack_require__){__webpack_require__.n_x=__webpack_require__.n;const __web_req__=__webpack_require__;__web_req__(765703);__web_req__(339881);globalThis._5f74ec40302898c5a55451c9fbd04240=globalThis._5f74ec40302898c5a55451c9fbd04240||{};(function(__c){var fmd=function(a){a={TV:__c.n_(1,a),PY:__c.z_(2,"TextAttributes")};return __c.B_(a)},hmd=function(){return{...gmd,"font-family":__c.gi.Bc["font-family"],color:"#000000"}},imd=function(a){switch(a){case 1:return{TV:1};case 2:return{TV:2,PY:hmd()};case 3:return{TV:3,PY:hmd()};case 4:return{TV:4,PY:hmd(),format:1};default:throw Error(`Unsupported signature field type: ${a}`);}},jmd=/^[^\s@]+@[^\s@]+\.[^\s@]+$/,kmd={LHb:__c.h_(1,__c.A_(__c.B_({dya:__c.o_(1,jmd),fullName:__c.o_(2),color:__c.o_(3,/^#[0-9a-fA-F]{6}$/)})))},
+lmd={TV:__c.n_(1,1)},mmd=__c.B_(lmd),nmd=fmd(2),omd=fmd(3),pmd={TV:__c.n_(1,4),PY:__c.z_(2,"TextAttributes"),format:__c.e_(__c.r_(3,1,2,3),1)},qmd={v6a:__c.u_(1,jmd),Sd:__c.h_(2,__c.D_({TV:void 0},mmd,nmd,omd,__c.B_(pmd)))},rmd={document:__c.k_.of(kmd),C:__c.k_.of(qmd)};var gmd={"font-weight":void 0,"font-style":void 0,"font-kerning":void 0,"font-feature-liga":void 0,"font-feature-clig":void 0,"font-feature-calt":void 0,"font-size-modifier":void 0,"vertical-align":void 0,"fill-id":void 0,decoration:void 0,strikethrough:void 0,kerning:void 0,link:void 0,"start-us":void 0,"font-size":void 0,leading:void 0,spacing:void 0,direction:void 0,tracking:void 0,"text-transform":void 0,"text-align":void 0,"head-indent":void 0,"list-marker":void 0,"list-level":void 0,"list-number-set":void 0,
+style:void 0,semantics:void 0};__c.e$c={dyc:1,gyc:{cyc:1,kAc:2,VCc:3},NBc:{Bxc:1,wzc:2,Uyc:3,byc:4},Cd:()=>({wGc(a){return{data:{C:{v6a:a.v6a,Sd:imd(a.type)},document:{LHb:new Map}},L:{width:a.width,height:a.height}}}}),Dd:__c.E_(rmd)};
+}).call(globalThis,globalThis._5f74ec40302898c5a55451c9fbd04240);}
+
+}])
+//# sourceMappingURL=sourcemaps/c2c14da69f2bdf6c.js.map
