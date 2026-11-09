@@ -207,6 +207,19 @@
     .contact-list b { font-size: 17px; word-break: break-word; }
     @media (max-width: 900px) { .area-grid { grid-template-columns: 1fr; gap: 44px; } .contact-card { padding: 34px 22px; } }
 
+    .area { background: var(--bg-soft); }
+    .towns span { background: #fff; }
+    .afield { margin-top: 22px; color: var(--muted); }
+    .afield a { color: var(--navy); font-weight: 700; }
+    .area-map img { width: 100%; height: auto; border-radius: var(--radius); box-shadow: var(--shadow); background: #eef1f6; }
+    .contact { padding: 88px 0; }
+    .contact-wide { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 48px; align-items: center; padding: 52px; }
+    .contact-wide > h3 { grid-column: 1; grid-row: 1; align-self: end; margin: 0; }
+    .contact-wide > p { grid-column: 1; grid-row: 2; align-self: start; margin: 0; }
+    .contact-wide .contact-list { margin: 0; grid-row: 1 / span 2; grid-column: 2; }
+    .contact-wide h3 { font-size: clamp(28px, 3.4vw, 38px); }
+    @media (max-width: 900px) { .contact-wide { grid-template-columns: 1fr; padding: 34px 22px; } .contact-wide > h3, .contact-wide > p, .contact-wide .contact-list { grid-column: auto; grid-row: auto; } .contact-wide .contact-list { margin-top: 8px; } }
+
     /* Footer */
     footer { background: var(--navy-deep); color: rgba(255,255,255,.7); padding: 48px 0 40px; font-size: 14.5px; }
     footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px; }
@@ -264,7 +277,8 @@
         <a class="link" href="#services">What we do</a>
         <a class="link" href="#why">Why us</a>
         <a class="link" href="#work">Our work</a>
-                <a class="link" href="#contact">Contact</a>
+                <a class="link" href="#area">Area</a>
+        <a class="link" href="#contact">Contact</a>
         <a class="btn btn-gold" href="tel:+447810303994"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>07810 303 994</a>
       </nav>
     </div>
@@ -420,17 +434,26 @@
       </div>
     </section>
 
-    <section id="contact">
+    <section id="area" class="area">
       <div class="wrap area-grid">
         <div class="reveal">
           <span class="eyebrow">Service area</span>
-          <h2>Working across Bristol &amp; Wiltshire</h2>
-          <p class="lead">Based in the South West, we cover Bristol, Bath, Wiltshire and the surrounding areas.</p>
+          <h2>Bristol, Bath, Wiltshire &amp; the South Cotswolds</h2>
+          <p class="lead">Commercial carpentry, house building and commercial refurbishments across Bristol, Bath, Wiltshire and the South Cotswolds.</p>
           <div class="towns">
-            <span>Bristol</span><span>Bath</span><span>Chippenham</span><span>Trowbridge</span><span>Devizes</span><span>Frome</span><span>Midsomer Norton</span>
+            <span>Bath</span><span>Bradford on Avon</span><span>Bristol</span><span>Calne</span><span>Chippenham</span><span>Cirencester</span><span>Corsham</span><span>Devizes</span><span>Dursley</span><span>Frome</span><span>Keynsham</span><span>Malmesbury</span><span>Marlborough</span><span>Melksham</span><span>Stroud</span><span>Swindon</span><span>Tetbury</span><span>Thornbury</span><span>Trowbridge</span><span>Yate</span>
           </div>
+          <p class="afield">Working further afield? <a href="#contact">Get in touch</a> to discuss your project.</p>
         </div>
-        <div class="contact-card reveal">
+        <figure class="area-map reveal">
+          <img src="img/service-area-map.jpg" alt="Map of the Calluc Carpentry service area, covering Bristol, Bath, Swindon, Stroud, Cirencester, Chippenham, Trowbridge, Frome and the towns in between" loading="lazy" width="1400" height="1320">
+        </figure>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="wrap">
+        <div class="contact-card contact-wide reveal">
           <h3>Tendering a project?</h3>
           <p>Send us your drawings and programme and we’ll come back to you promptly with a price.</p>
           <ul class="contact-list">
