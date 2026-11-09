@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calluc Carpentry Ltd | Carpentry Contractor, Bristol &amp; Wiltshire</title>
+  <meta name="description" content="Calluc Carpentry Ltd is a carpentry contractor specialising in new build homes, commercial carpentry and renovations across Bristol and Wiltshire. Call 07810 303 994.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0b2341">
+  <meta property="og:title" content="Calluc Carpentry Ltd | Carpentry Contractor, Bristol &amp; Wiltshire">
+  <meta property="og:description" content="Carpentry contractor for new build homes, commercial carpentry and renovations across Bristol and Wiltshire.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://www.calluccarpentry.com/icons/icon-512.png">
+  <link rel="icon" href="../icons/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="../icons/icon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="img/hero.jpg">
+  <style>
+    :root {
+      --navy: #0b2341;
+      --navy-2: #12325a;
+      --navy-deep: #071a31;
+      --gold: #d4a957;
+      --gold-soft: #f3e6cc;
+      --ink: #0f1c2e;
+      --muted: #5a6677;
+      --line: #e4e7ec;
+      --bg: #ffffff;
+      --bg-soft: #f6f4ef;
+      --radius: 18px;
+      --wrap: 1180px;
+      --shadow: 0 1px 2px rgba(11,35,65,.06), 0 12px 32px rgba(11,35,65,.08);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+    body {
+      margin: 0; background: var(--bg); color: var(--ink);
+      font: 17px/1.65 Manrope, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    img, video { max-width: 100%; display: block; }
+    a { color: inherit; }
+    h1, h2, h3 { line-height: 1.12; letter-spacing: -.025em; margin: 0 0 .5em; font-weight: 800; }
+    h2 { font-size: clamp(30px, 4.2vw, 46px); }
+    p { margin: 0 0 1em; }
+    .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 20px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+    .eyebrow::before { content: ""; width: 28px; height: 2px; background: currentColor; border-radius: 2px; }
+    section { padding: 104px 0; }
+    .lead { font-size: 19px; color: var(--muted); max-width: 60ch; }
+
+    .btn { display: inline-flex; align-items: center; gap: 10px; padding: 15px 26px; border-radius: 999px; font-weight: 700; font-size: 16px; text-decoration: none; transition: transform .15s ease, background .15s ease, box-shadow .15s ease; white-space: nowrap; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-gold { background: var(--gold); color: var(--navy-deep); box-shadow: 0 8px 24px rgba(212,169,87,.35); }
+    .btn-gold:hover { background: #e0b766; }
+    .btn-outline { color: #fff; border: 1.5px solid rgba(255,255,255,.45); }
+    .btn-outline:hover { background: rgba(255,255,255,.1); }
+    .btn-navy { background: var(--navy); color: #fff; }
+    .btn-navy:hover { background: var(--navy-2); }
+    .btn svg { width: 18px; height: 18px; flex: none; }
+
+    /* Header */
+    .site-header { position: fixed; inset: 0 0 auto; z-index: 50; transition: background .25s ease, box-shadow .25s ease; }
+    .site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 20px; height: 80px; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .brand-badge { width: 54px; height: 54px; border-radius: 50%; background: #fff; display: grid; place-items: center; box-shadow: 0 2px 10px rgba(0,0,0,.12); flex: none; }
+    .brand-badge img { width: 46px; }
+    .brand-name { font-weight: 800; font-size: 18px; letter-spacing: -.01em; color: #fff; line-height: 1.1; transition: color .25s; }
+    .brand-name small { display: block; font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; opacity: .75; }
+    .nav { display: flex; align-items: center; gap: 30px; }
+    .nav a.link { color: rgba(255,255,255,.88); text-decoration: none; font-weight: 600; font-size: 15px; transition: color .2s; }
+    .nav a.link:hover { color: var(--gold); }
+    .nav .btn { padding: 11px 20px; font-size: 15px; }
+    .site-header.scrolled { background: rgba(255,255,255,.96); backdrop-filter: blur(10px); box-shadow: 0 1px 0 var(--line), 0 6px 24px rgba(11,35,65,.06); }
+    .site-header.scrolled .brand-name { color: var(--navy); }
+    .site-header.scrolled .nav a.link { color: var(--ink); }
+    .site-header.scrolled .nav a.link:hover { color: var(--gold); }
+    .site-header.scrolled .brand-badge { box-shadow: none; border: 1px solid var(--line); }
+    .menu-btn { display: none; background: none; border: 0; padding: 8px; color: #fff; cursor: pointer; }
+    .site-header.scrolled .menu-btn { color: var(--navy); }
+    .call-mini { display: none; }
+    @media (max-width: 900px) {
+      .nav { position: fixed; inset: 80px 0 auto; flex-direction: column; align-items: stretch; gap: 0; background: #fff; padding: 8px 20px 24px; box-shadow: 0 20px 40px rgba(11,35,65,.15); transform: translateY(-12px); opacity: 0; pointer-events: none; transition: .2s ease; }
+      .nav.open { transform: none; opacity: 1; pointer-events: auto; }
+      .nav a.link { color: var(--ink) !important; padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 17px; }
+      .nav .btn { margin-top: 16px; justify-content: center; }
+      .menu-btn { display: block; }
+      .call-mini { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: var(--gold); color: var(--navy-deep); margin-left: auto; }
+      .call-mini svg { width: 20px; height: 20px; }
+      .site-header .wrap { gap: 10px; }
+    }
+
+    /* Hero */
+    .hero { position: relative; min-height: 100svh; display: flex; flex-direction: column; justify-content: flex-end; color: #fff; padding: 140px 0 0; overflow: hidden; background: var(--navy-deep) url(img/hero.jpg) center/cover; }
+    .hero video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .hero::after { content: ""; position: absolute; inset: 0; background:
+      linear-gradient(180deg, rgba(7,26,49,.55) 0%, rgba(7,26,49,.25) 35%, rgba(7,26,49,.85) 100%),
+      linear-gradient(90deg, rgba(7,26,49,.75) 0%, rgba(7,26,49,0) 70%); }
+    .hero .wrap { position: relative; z-index: 1; width: 100%; }
+    .hero h1 { font-size: clamp(40px, 6.6vw, 80px); max-width: 15ch; margin-bottom: 22px; }
+    .hero h1 em { font-style: normal; color: var(--gold); }
+    .hero p { font-size: clamp(17px, 1.6vw, 20px); color: rgba(255,255,255,.86); max-width: 54ch; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 34px 0 72px; }
+    .stats { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgba(255,255,255,.18); }
+    .stat { padding: 26px 0 30px; }
+    .stat + .stat { padding-left: 28px; border-left: 1px solid rgba(255,255,255,.18); }
+    .stat b { display: block; font-size: clamp(28px, 3.6vw, 40px); font-weight: 800; letter-spacing: -.02em; color: #fff; line-height: 1.1; }
+    .stat span { font-size: 14px; color: rgba(255,255,255,.7); font-weight: 600; }
+    @media (max-width: 560px) { .stat + .stat { padding-left: 14px; } .hero-actions .btn { flex: 1 1 100%; justify-content: center; } }
+
+    /* Accreditations */
+    .accred { padding: 34px 0; border-bottom: 1px solid var(--line); }
+    .accred .wrap { display: flex; align-items: center; gap: 40px; flex-wrap: wrap; justify-content: center; }
+    .accred-label { font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+    .accred-logos { display: flex; align-items: center; gap: 44px; flex-wrap: wrap; justify-content: center; }
+    .accred-logos img { height: 40px; width: auto; object-fit: contain; filter: grayscale(1); opacity: .7; transition: .2s; }
+    .accred-logos img:hover { filter: none; opacity: 1; }
+    @media (max-width: 560px) { .accred-logos { gap: 26px; } .accred-logos img { height: 32px; } }
+
+    /* About */
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+    .about-media { position: relative; }
+    .about-media img { border-radius: var(--radius); aspect-ratio: 4/5; object-fit: cover; object-position: 50% 85%; width: 100%; box-shadow: var(--shadow); }
+    .about-badge { position: absolute; right: -22px; bottom: 34px; background: var(--navy); color: #fff; border-radius: 16px; padding: 20px 24px; box-shadow: var(--shadow); max-width: 230px; }
+    .about-badge b { display: block; font-size: 15px; color: var(--gold); margin-bottom: 2px; }
+    .about-badge span { font-size: 14px; color: rgba(255,255,255,.8); line-height: 1.45; display: block; }
+    .about-text p { color: var(--muted); }
+    .about-text p.big { font-size: 20px; color: var(--ink); font-weight: 500; }
+    .values { list-style: none; padding: 0; margin: 28px 0 0; display: grid; gap: 14px; }
+    .values li { display: flex; gap: 14px; align-items: flex-start; }
+    .tick { width: 28px; height: 28px; flex: none; border-radius: 50%; background: var(--gold-soft); color: #9a7224; display: grid; place-items: center; margin-top: 1px; }
+    .tick svg { width: 15px; height: 15px; }
+    .values strong { display: block; font-size: 16px; }
+    .values span { color: var(--muted); font-size: 15px; }
+    @media (max-width: 900px) { .about-grid { grid-template-columns: 1fr; gap: 44px; } .about-media img { aspect-ratio: 4/3; } .about-badge { right: 14px; bottom: 14px; } }
+
+    /* Services */
+    .services { background: var(--bg-soft); }
+    .head-row { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; margin-bottom: 48px; }
+    .head-row h2 { margin: 0; max-width: 16ch; }
+    .head-row p { color: var(--muted); max-width: 46ch; margin: 0; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .card { background: #fff; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); display: flex; flex-direction: column; transition: transform .2s ease; }
+    .card:hover { transform: translateY(-4px); }
+    .card-img { aspect-ratio: 16/10; overflow: hidden; }
+    .card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+    .card:hover .card-img img { transform: scale(1.05); }
+    .card-body { padding: 26px 26px 30px; }
+    .card-num { font-size: 13px; font-weight: 800; color: var(--gold); letter-spacing: .1em; }
+    .card h3 { font-size: 23px; margin: 6px 0 10px; }
+    .card p { color: var(--muted); font-size: 15.5px; margin: 0; }
+    @media (max-width: 900px) { .cards { grid-template-columns: 1fr; } }
+
+    /* Work */
+    .work { background: var(--navy); color: #fff; }
+    .work .head-row p { color: rgba(255,255,255,.7); }
+    .projects { display: grid; grid-template-columns: 1.3fr 1fr; grid-template-rows: 1fr 1fr; gap: 20px; }
+    .project { position: relative; border-radius: var(--radius); overflow: hidden; min-height: 260px; }
+    .project:first-child { grid-row: span 2; min-height: 540px; }
+    .project img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+    .project:hover img { transform: scale(1.04); }
+    .project::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 45%, rgba(7,26,49,.88)); }
+    .project figcaption { position: absolute; left: 24px; right: 24px; bottom: 22px; z-index: 1; }
+    .project figcaption b { display: block; font-size: 21px; letter-spacing: -.01em; }
+    .project figcaption span { font-size: 14px; color: var(--gold); font-weight: 600; }
+    figure { margin: 0; }
+    @media (max-width: 800px) { .projects { grid-template-columns: 1fr; grid-template-rows: none; } .project, .project:first-child { grid-row: auto; min-height: 280px; } }
+
+    /* Clients */
+    .clients { padding: 84px 0; }
+    .clients h2 { text-align: center; font-size: clamp(24px, 3vw, 32px); margin-bottom: 36px; }
+    .client-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 16px; }
+    .client { border: 1px solid var(--line); border-radius: 14px; height: 104px; display: grid; place-items: center; padding: 18px; background: #fff; }
+    .client img { max-height: 58px; max-width: 100%; width: auto; object-fit: contain; }
+    @media (max-width: 1000px) { .client-grid { grid-template-columns: repeat(4, 1fr); } }
+    @media (max-width: 560px) { .client-grid { grid-template-columns: repeat(2, 1fr); } }
+
+    /* Testimonials */
+    .testimonials { background: var(--bg-soft); }
+    .quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .quote { background: #fff; border-radius: var(--radius); padding: 34px 30px 30px; box-shadow: var(--shadow); display: flex; flex-direction: column; position: relative; }
+    .quote::before { content: "\201C"; font-size: 84px; line-height: .8; height: 40px; color: var(--gold); font-weight: 800; }
+    .quote blockquote { margin: 0 0 26px; font-size: 16.5px; line-height: 1.65; flex: 1; }
+    .quote figcaption { border-top: 1px solid var(--line); padding-top: 18px; display: flex; gap: 14px; align-items: center; }
+    .avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--navy); color: #fff; display: grid; place-items: center; font-weight: 800; font-size: 15px; flex: none; }
+    .quote figcaption b { display: block; font-size: 15.5px; }
+    .quote figcaption div span { font-size: 14px; color: var(--muted); }
+    @media (max-width: 900px) { .quotes { grid-template-columns: 1fr; } }
+
+    /* Area + contact */
+    .area-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .towns { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+    .towns span { padding: 9px 16px; border-radius: 999px; background: var(--bg-soft); border: 1px solid var(--line); font-weight: 600; font-size: 15px; }
+    .contact-card { background: var(--navy); color: #fff; border-radius: 24px; padding: 44px 40px; position: relative; overflow: hidden; }
+    .contact-card::after { content: ""; position: absolute; width: 320px; height: 320px; right: -110px; top: -110px; border-radius: 50%; border: 44px solid rgba(212,169,87,.12); }
+    .contact-card h3 { font-size: 30px; margin-bottom: 10px; }
+    .contact-card > p { color: rgba(255,255,255,.75); }
+    .contact-list { list-style: none; padding: 0; margin: 26px 0 0; display: grid; gap: 12px; position: relative; z-index: 1; }
+    .contact-list a { display: flex; align-items: center; gap: 16px; padding: 16px 18px; border-radius: 14px; background: rgba(255,255,255,.07); text-decoration: none; transition: background .2s; }
+    .contact-list a:hover { background: rgba(255,255,255,.13); }
+    .contact-list .ico { width: 44px; height: 44px; border-radius: 12px; background: var(--gold); color: var(--navy-deep); display: grid; place-items: center; flex: none; }
+    .contact-list .ico svg { width: 20px; height: 20px; }
+    .contact-list small { display: block; font-size: 13px; color: rgba(255,255,255,.65); }
+    .contact-list b { font-size: 17px; word-break: break-word; }
+    @media (max-width: 900px) { .area-grid { grid-template-columns: 1fr; gap: 44px; } .contact-card { padding: 34px 22px; } }
+
+    /* Footer */
+    footer { background: var(--navy-deep); color: rgba(255,255,255,.7); padding: 48px 0 40px; font-size: 14.5px; }
+    footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px; }
+    footer .brand-name { color: #fff; }
+    footer a { text-decoration: none; }
+    footer a:hover { color: var(--gold); }
+    .foot-links { display: flex; gap: 22px; flex-wrap: wrap; }
+
+    /* Sticky mobile call bar */
+    .mobile-bar { display: none; }
+    @media (max-width: 700px) {
+      .mobile-bar { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 40; transform: translateY(140%); transition: transform .3s ease; }
+      .mobile-bar.show { transform: none; }
+      .mobile-bar .btn { justify-content: center; padding: 14px 10px; box-shadow: 0 10px 30px rgba(7,26,49,.3); }
+      footer { padding-bottom: 100px; }
+    }
+
+    /* Reveal */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+
+  <header class="site-header" id="header">
+    <div class="wrap">
+      <a class="brand" href="#top" aria-label="Calluc Carpentry Ltd, home">
+        <span class="brand-badge"><img src="img/logo.png" alt=""></span>
+        <span class="brand-name">Calluc Carpentry<small>Ltd</small></span>
+      </a>
+      <a class="call-mini" href="tel:+447810303994" aria-label="Call 07810 303 994"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <nav class="nav" id="nav" aria-label="Main">
+        <a class="link" href="#about">About</a>
+        <a class="link" href="#services">Services</a>
+        <a class="link" href="#work">Our work</a>
+        <a class="link" href="#testimonials">Testimonials</a>
+        <a class="link" href="#contact">Contact</a>
+        <a class="btn btn-gold" href="tel:+447810303994"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>07810 303 994</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-label="Introduction">
+      <video autoplay muted loop playsinline preload="metadata" poster="img/hero.jpg" aria-hidden="true" id="heroVideo">
+        <source src="img/hero.mp4" type="video/mp4">
+      </video>
+      <div class="wrap">
+        <span class="eyebrow">Carpentry contractor · Bristol &amp; Wiltshire</span>
+        <h1>Carpentry built on <em>quality</em> and trust.</h1>
+        <p>We specialise in New Build Homes, Commercial Carpentry and Renovations, combining traditional skill with modern standards of service.</p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#contact">Get in touch
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-outline" href="#work">See our work</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><b>2023</b><span>Established</span></div>
+          <div class="stat"><b>7</b><span>Clients</span></div>
+          <div class="stat"><b>34+</b><span>Projects</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="accred" aria-label="Accreditations">
+      <div class="wrap">
+        <span class="accred-label">Accredited &amp; insured</span>
+        <div class="accred-logos">
+          <img src="img/logo-chas.png" alt="CHAS" loading="lazy">
+          <img src="img/logo-citb.png" alt="CITB SSSTS" loading="lazy">
+          <img src="img/logo-ssip.png" alt="SSIP" loading="lazy">
+          <img src="img/logo-cscs.png" alt="CSCS" loading="lazy">
+          <img src="img/logo-marsh.png" alt="Marsh Commercial" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="wrap about-grid">
+        <div class="about-media reveal">
+          <img src="img/aerial.jpg" alt="" loading="lazy">
+          <div class="about-badge"><b>Bristol &amp; Wiltshire</b><span>Built on repeat customers and word-of-mouth recommendations.</span></div>
+        </div>
+        <div class="about-text reveal">
+          <span class="eyebrow">About us</span>
+          <h2>Quality, honest communication and personalised service.</h2>
+          <p class="big">We take real pride in the work we deliver across Bristol and Wiltshire, ensuring every project, no matter the size, receives the same level of care, attention to detail and professionalism.</p>
+          <p>What sets us apart from other contractors is the way we combine traditional skill with modern standards of service. We’re reliable, approachable, and committed to delivering a clean, high-quality finish that stands the test of time.</p>
+          <ul class="values">
+            <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></span><div><strong>Dependable scheduling</strong><span>We meet programme deadlines and adapt when plans change.</span></div></li>
+            <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></span><div><strong>Tidy working practices</strong><span>A clean, professional site from start to finish.</span></div></li>
+            <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></span><div><strong>Genuine value for money</strong><span>A high-quality finish that stands the test of time.</span></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="services">
+      <div class="wrap">
+        <div class="head-row reveal">
+          <div><span class="eyebrow">What we do</span><h2>Our specialisms</h2></div>
+          <p>An experienced team providing the skilled manpower to complete projects efficiently and to a high standard.</p>
+        </div>
+        <div class="cards">
+          <article class="card reveal">
+            <div class="card-img"><img src="img/new-build.jpg" alt="" loading="lazy"></div>
+            <div class="card-body"><span class="card-num">01</span><h3>New Build Homes</h3><p>Reliable carpentry for housebuilders and developers, working to programme and ready to adapt to changes in scope or timing.</p></div>
+          </article>
+          <article class="card reveal">
+            <div class="card-img"><img src="img/commercial.jpg" alt="" loading="lazy"></div>
+            <div class="card-body"><span class="card-num">02</span><h3>Commercial Carpentry</h3><p>Professional teams for commercial projects, consistently meeting deadlines with tidy working practices on site.</p></div>
+          </article>
+          <article class="card reveal">
+            <div class="card-img"><img src="img/renovation.jpg" alt="" loading="lazy"></div>
+            <div class="card-body"><span class="card-num">03</span><h3>Renovations</h3><p>Careful renovation work with real attention to detail and a clean, high-quality finish.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="work">
+      <div class="wrap">
+        <div class="head-row reveal">
+          <div><span class="eyebrow">Our work</span><h2>Recent projects</h2></div>
+          <p>A selection of projects we’ve delivered across Bristol, Somerset and Wiltshire.</p>
+        </div>
+        <div class="projects">
+          <figure class="project reveal"><img src="img/silver-street.jpg" alt="" loading="lazy"><figcaption><b>Silver Street</b><span>Midsomer Norton</span></figcaption></figure>
+          <figure class="project reveal"><img src="img/bromham.jpg" alt="" loading="lazy"><figcaption><b>Bromham Community Centre</b><span>Bromham, Wiltshire</span></figcaption></figure>
+          <figure class="project reveal"><img src="img/stonebridge.jpg" alt="" loading="lazy"><figcaption><b>Stonebridge Park</b><span>Bristol</span></figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="clients" aria-labelledby="clients-h">
+      <div class="wrap">
+        <h2 id="clients-h" class="reveal">Who we work with</h2>
+        <div class="client-grid reveal">
+          <div class="client"><img src="img/logo-agile.png" alt="Agile Homes" loading="lazy"></div>
+          <div class="client"><img src="img/logo-rigg.png" alt="Rigg Construction" loading="lazy"></div>
+          <div class="client"><img src="img/logo-hills.png" alt="Hills" loading="lazy"></div>
+          <div class="client"><img src="img/logo-wilkins.png" alt="Wilkins Builders" loading="lazy"></div>
+          <div class="client"><img src="img/logo-envisage.png" alt="Envisage" loading="lazy"></div>
+          <div class="client"><img src="img/logo-laburnum.png" alt="Laburnum Associates" loading="lazy"></div>
+          <div class="client"><img src="img/logo-steeledavis.png" alt="SteeleDavis" loading="lazy"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+      <div class="wrap">
+        <div class="head-row reveal">
+          <div><span class="eyebrow">Testimonials</span><h2>What our clients say</h2></div>
+        </div>
+        <div class="quotes">
+          <figure class="quote reveal">
+            <blockquote>You and Darren have applied yourselves exceptionally well during the build and your team’s support has been very much appreciated.</blockquote>
+            <figcaption><span class="avatar">IB</span><div><b>Ian Butler</b><span>Head of Delivery, Agile Homes</span></div></figcaption>
+          </figure>
+          <figure class="quote reveal">
+            <blockquote>Calluc Carpentry offers a reliable and professional service, always willing to work with us and adapt to project requirements, whether it be a change to scope and detail of work or programme and timing.</blockquote>
+            <figcaption><span class="avatar">JP</span><div><b>John Price</b><span>Commercial Director, Rigg Construction</span></div></figcaption>
+          </figure>
+          <figure class="quote reveal">
+            <blockquote>Calluc Carpentry has a highly experienced and professional team that consistently meets project deadlines and provides the necessary skilled manpower to ensure work is completed efficiently and to a high standard.</blockquote>
+            <figcaption><span class="avatar">CH</span><div><b>Chris Hall</b><span>Director, Willingdon Homes</span></div></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap area-grid">
+        <div class="reveal">
+          <span class="eyebrow">Service area</span>
+          <h2>Working across Bristol &amp; Wiltshire</h2>
+          <p class="lead">Based in the South West, we cover Bristol, Bath, Wiltshire and the surrounding areas.</p>
+          <div class="towns">
+            <span>Bristol</span><span>Bath</span><span>Chippenham</span><span>Trowbridge</span><span>Devizes</span><span>Frome</span><span>Midsomer Norton</span>
+          </div>
+        </div>
+        <div class="contact-card reveal">
+          <h3>Planning a project?</h3>
+          <p>Get in touch and we’ll get back to you promptly.</p>
+          <ul class="contact-list">
+            <li><a href="tel:+447810303994"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><span><small>Call us</small><b>07810 303 994</b></span></a></li>
+            <li><a href="mailto:calluccarpentry@gmail.com?subject=Project%20enquiry"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><span><small>Email us</small><b>calluccarpentry@gmail.com</b></span></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <a class="brand" href="#top"><span class="brand-badge"><img src="img/logo.png" alt=""></span><span class="brand-name">Calluc Carpentry<small>Ltd</small></span></a>
+      <div class="foot-links">
+        <a href="tel:+447810303994">07810 303 994</a>
+        <a href="mailto:calluccarpentry@gmail.com">calluccarpentry@gmail.com</a>
+      </div>
+      <span>© <span id="yr">2026</span> Calluc Carpentry Ltd</span>
+    </div>
+  </footer>
+
+  <div class="mobile-bar" id="mobileBar">
+    <a class="btn btn-gold" href="tel:+447810303994">Call us</a>
+    <a class="btn btn-navy" href="mailto:calluccarpentry@gmail.com?subject=Project%20enquiry">Email us</a>
+  </div>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    const header = document.getElementById('header'), bar = document.getElementById('mobileBar');
+    const onScroll = () => { const y = window.scrollY; header.classList.toggle('scrolled', y > 40); bar.classList.toggle('show', y > window.innerHeight * 0.7); };
+    window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+    const nav = document.getElementById('nav'), menuBtn = document.getElementById('menuBtn');
+    menuBtn.addEventListener('click', () => { const open = nav.classList.toggle('open'); menuBtn.setAttribute('aria-expanded', open); header.classList.add('scrolled'); });
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { nav.classList.remove('open'); menuBtn.setAttribute('aria-expanded', false); }));
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) { const v = document.getElementById('heroVideo'); v.removeAttribute('autoplay'); v.pause(); }
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
