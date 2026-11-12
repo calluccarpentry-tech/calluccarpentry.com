@@ -8,3 +8,9 @@ nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { nav.c
 const v = document.getElementById('heroVideo'); if (v && matchMedia('(prefers-reduced-motion: reduce)').matches) { v.removeAttribute('autoplay'); v.pause(); }
 const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+document.querySelectorAll('.gtile img').forEach(img => img.addEventListener('click', () => {
+  const box = document.createElement('div'); box.className = 'lightbox';
+  const big = document.createElement('img'); big.src = img.src; big.alt = img.alt; box.appendChild(big);
+  box.addEventListener('click', () => box.remove()); document.body.appendChild(box);
+}));
