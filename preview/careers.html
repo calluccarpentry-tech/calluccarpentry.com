@@ -124,7 +124,7 @@
       <div class="foot-links">
         <a href="careers.html">Careers</a>
         <a href="tel:+447810303994">07810 303 994</a>
-        <a href="mailto:calluccarpentry@gmail.com">calluccarpentry@gmail.com</a>
+        <a href="mailto:office@calluccarpentry.com">office@calluccarpentry.com</a>
       </div>
       <span>© <span id="yr">2026</span> Calluc Carpentry Ltd</span>
     </div>
@@ -143,7 +143,7 @@
       document.getElementById('formError').hidden = !!ok;
       if (!ok) return;
       const body = `Name: ${v('first')} ${v('last')}\nEmail: ${v('email')}\nPhone: ${v('phone')}\nRole: ${v('role')}\nCSCS card: ${v('cscs')}\nBased in: ${v('area')}\n\nExperience:\n${v('message')}\n\n(CV attached if available)`;
-      location.href = 'mailto:calluccarpentry@gmail.com?subject=' + encodeURIComponent('Job application: ' + v('role') + ' - ' + v('first') + ' ' + v('last')) + '&body=' + encodeURIComponent(body);
+      location.href = 'mailto:office@calluccarpentry.com?subject=' + encodeURIComponent('Job application: ' + v('role') + ' - ' + v('first') + ' ' + v('last')) + '&body=' + encodeURIComponent(body);
     });
   </script>
 </body>
