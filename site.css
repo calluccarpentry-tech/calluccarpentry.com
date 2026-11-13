@@ -337,3 +337,6 @@ footer a:hover { color: var(--gold); }
 .follow-light { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; color: var(--muted); }
 .social-dark { color: var(--navy); text-decoration: none; }
 .social-dark:hover { color: #9a7224; }
+
+.ggrid { align-items: center; }
+.gtile-tall { aspect-ratio: 3/4; }
