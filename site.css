@@ -341,18 +341,11 @@ footer a:hover { color: var(--gold); }
 .ggrid { align-items: center; }
 .gtile-tall { aspect-ratio: 3/4; }
 
-/* Gallery: feature band behind the middle row */
-.ggrid { row-gap: 46px; position: relative; }
-.ggrid .gtile { box-shadow: 0 1px 2px rgba(11,35,65,.06), 0 10px 26px rgba(11,35,65,.12); position: relative; z-index: 1; }
-.ggrid .gtile:nth-child(1) { grid-area: 1 / 1; } .ggrid .gtile:nth-child(2) { grid-area: 1 / 2; } .ggrid .gtile:nth-child(3) { grid-area: 1 / 3; }
-.ggrid .gtile:nth-child(4) { grid-area: 2 / 1; } .ggrid .gtile:nth-child(5) { grid-area: 2 / 2; } .ggrid .gtile:nth-child(6) { grid-area: 2 / 3; }
-.ggrid .gtile:nth-child(7) { grid-area: 3 / 1; } .ggrid .gtile:nth-child(8) { grid-area: 3 / 2; } .ggrid .gtile:nth-child(9) { grid-area: 3 / 3; }
-.ggrid::before { content: ""; grid-area: 2 / 1 / 3 / -1; align-self: stretch; margin: -22px -22px; border-radius: 22px; background: var(--navy);
-  background-image: linear-gradient(90deg, transparent calc(50% - 60px), var(--gold) calc(50% - 60px), var(--gold) calc(50% + 60px), transparent calc(50% + 60px)); background-size: 100% 3px; background-repeat: no-repeat; background-position: top; }
-.ggrid .gtile:nth-child(4), .ggrid .gtile:nth-child(6) { outline: 3px solid rgba(212,169,87,.9); outline-offset: 5px; }
+.gcols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; aspect-ratio: 1.217; }
+.gcol { display: flex; flex-direction: column; gap: 16px; min-height: 0; }
+.gcols .gtile { flex: var(--f) 1 0; aspect-ratio: auto; min-height: 0; border-radius: 16px; box-shadow: 0 1px 2px rgba(11,35,65,.06), 0 10px 26px rgba(11,35,65,.10); }
 @media (max-width: 700px) {
-  .ggrid { row-gap: 10px; }
-  .ggrid::before { display: none; }
-  .ggrid .gtile:nth-child(n) { grid-area: auto; outline: none; }
-  .ggrid .gtile.gtile-tall:nth-child(n) { grid-row: span 2; aspect-ratio: auto; align-self: stretch; }
+  .gcols { display: block; aspect-ratio: auto; columns: 2; column-gap: 10px; }
+  .gcol { display: contents; }
+  .gcols .gtile { flex: none; aspect-ratio: 1 / var(--f); margin-bottom: 10px; break-inside: avoid; border-radius: 12px; }
 }
