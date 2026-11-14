@@ -14,3 +14,5 @@ document.querySelectorAll('.gtile img').forEach(img => img.addEventListener('cli
   const big = document.createElement('img'); big.src = img.src; big.alt = img.alt; box.appendChild(big);
   box.addEventListener('click', () => box.remove()); document.body.appendChild(box);
 }));
+
+document.querySelectorAll('.gvid').forEach(v => { if (matchMedia('(prefers-reduced-motion: reduce)').matches) { v.removeAttribute('autoplay'); v.pause(); v.controls = true; } });
