@@ -386,3 +386,5 @@ section { padding: 92px 0; }
 .fire-note b { color: var(--ink); }
 .fire-note:hover span { text-decoration: underline; }
 @media (max-width: 560px) { .fire-note { margin-top: -8px; align-items: flex-start; text-align: left; } }
+
+.fire-note em { font-style: normal; font-weight: 700; color: #b3261e; white-space: nowrap; margin-left: 6px; }
