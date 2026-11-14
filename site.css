@@ -349,3 +349,10 @@ footer a:hover { color: var(--gold); }
   .gcol { display: contents; }
   .gcols .gtile { flex: none; aspect-ratio: 1 / var(--f); margin-bottom: 10px; break-inside: avoid; border-radius: 12px; }
 }
+
+/* Calmer home page */
+.town-line { margin-top: 22px; color: var(--muted); font-size: 15.5px; line-height: 2; }
+.client { border: 0; background: none; height: 84px; padding: 10px; }
+.clients { padding: 72px 0; }
+.about-media img { aspect-ratio: 4/3; }
+section { padding: 92px 0; }
