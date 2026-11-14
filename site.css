@@ -411,3 +411,7 @@ section { padding: 92px 0; }
 .pcard[hidden] { display: none; }
 .pmore { display: flex; justify-content: center; margin-top: 34px; }
 .pmore .btn { border: 0; cursor: pointer; font-family: inherit; }
+
+/* Brand name on two lines: Calluc / Carpentry Ltd */
+.brand-name.brand-stack { line-height: 1.12; }
+.brand-name.brand-stack small { display: inline; margin-left: 3px; font-size: 11px; }
