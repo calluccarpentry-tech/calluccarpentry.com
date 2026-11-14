@@ -406,3 +406,8 @@ section { padding: 92px 0; }
 
 .quotes.quotes-2 { grid-template-columns: repeat(2, 1fr); }
 @media (max-width: 900px) { .quotes.quotes-2 { grid-template-columns: 1fr; } }
+
+/* Show-more projects */
+.pcard[hidden] { display: none; }
+.pmore { display: flex; justify-content: center; margin-top: 34px; }
+.pmore .btn { border: 0; cursor: pointer; font-family: inherit; }

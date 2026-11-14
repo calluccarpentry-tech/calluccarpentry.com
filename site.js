@@ -16,3 +16,19 @@ document.querySelectorAll('.gtile img').forEach(img => img.addEventListener('cli
 }));
 
 document.querySelectorAll('.gvid').forEach(v => { if (matchMedia('(prefers-reduced-motion: reduce)').matches) { v.removeAttribute('autoplay'); v.pause(); v.controls = true; } });
+
+/* Project lists: show three at a time, newest first, with a "Show more" button */
+document.querySelectorAll('.pgrid').forEach(grid => {
+  const STEP = 3, cards = [...grid.children];
+  if (cards.length <= STEP) return;
+  cards.slice(STEP).forEach(c => { c.hidden = true; });
+  const wrap = document.createElement('div'); wrap.className = 'pmore';
+  const btn = document.createElement('button'); btn.type = 'button'; btn.className = 'btn btn-gold';
+  const label = () => { const left = cards.filter(c => c.hidden).length; btn.textContent = 'Show more projects (' + left + ')'; };
+  label();
+  btn.addEventListener('click', () => {
+    cards.filter(c => c.hidden).slice(0, STEP).forEach(c => { c.hidden = false; c.classList.add('in'); });
+    if (cards.some(c => c.hidden)) label(); else wrap.remove();
+  });
+  wrap.appendChild(btn); grid.after(wrap);
+});
