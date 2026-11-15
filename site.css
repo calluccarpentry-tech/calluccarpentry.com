@@ -429,3 +429,8 @@ section { padding: 92px 0; }
 .gmore { display: flex; justify-content: center; margin-top: 30px; }
 .gmore .btn { border: 0; cursor: pointer; font-family: inherit; }
 @media (max-width: 700px) { .gextra { grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; } .gextra .gtile, .gextra .gtile:nth-child(5n+4), .gextra .gtile:nth-child(5n+5) { grid-column: auto; aspect-ratio: 4/3; border-radius: 12px; } .gextra .gtile:last-child:nth-child(odd) { grid-column: 1 / -1; aspect-ratio: 16/9; } }
+
+/* Show-more gallery: first row of three, then rows of two */
+.gextra .gtile:nth-child(n) { grid-column: span 2; aspect-ratio: 4/3; }
+.gextra .gtile:nth-child(n+4) { grid-column: span 3; aspect-ratio: 16/10; }
+@media (max-width: 700px) { .gextra .gtile:nth-child(n) { grid-column: auto; aspect-ratio: 4/3; } .gextra .gtile:last-child:nth-child(odd) { grid-column: 1 / -1; aspect-ratio: 16/9; } }
