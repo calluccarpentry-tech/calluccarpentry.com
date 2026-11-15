@@ -434,3 +434,11 @@ section { padding: 92px 0; }
 .gextra .gtile:nth-child(n) { grid-column: span 2; aspect-ratio: 4/3; }
 .gextra .gtile:nth-child(n+4) { grid-column: span 3; aspect-ratio: 16/10; }
 @media (max-width: 700px) { .gextra .gtile:nth-child(n) { grid-column: auto; aspect-ratio: 4/3; } .gextra .gtile:last-child:nth-child(odd) { grid-column: 1 / -1; aspect-ratio: 16/9; } }
+
+/* Project card with no photo yet */
+.pcard-noimg { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; color: #8a96a8;
+  background: repeating-linear-gradient(135deg, #eef1f5 0 14px, #e6eaf0 14px 28px); border-bottom: 1px solid var(--line); }
+.pcard-noimg svg { width: 44px; height: 44px; }
+.pcard-noimg span { font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+/* Show-more gallery: an odd photo left over on the last row fills the width */
+.gextra .gtile:nth-child(n+4):last-child:nth-child(even) { grid-column: 1 / -1; aspect-ratio: 21/9; }
