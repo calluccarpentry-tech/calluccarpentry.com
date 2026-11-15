@@ -415,3 +415,8 @@ section { padding: 92px 0; }
 /* Brand name on two lines: Calluc / Carpentry Ltd */
 .brand-name.brand-stack { line-height: 1.08; }
 .brand-name.brand-stack small { display: block; font-size: 10.5px; margin-top: 2px; }
+
+/* Main heading includes the location label, laid out exactly as before */
+.hero h1.h1-wrap { display: contents; }
+.hero .h1-wrap .eyebrow { line-height: 1.65; }
+.hero .h1-wrap .h1-main { display: block; max-width: 15ch; margin: 0 0 22px; }
