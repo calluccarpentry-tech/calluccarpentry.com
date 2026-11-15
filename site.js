@@ -32,3 +32,13 @@ document.querySelectorAll('.pgrid').forEach(grid => {
   });
   wrap.appendChild(btn); grid.after(wrap);
 });
+
+/* Domestic gallery: show / hide the extra photos */
+document.querySelectorAll('.gmore button').forEach(btn => {
+  const box = document.getElementById(btn.getAttribute('aria-controls'));
+  btn.addEventListener('click', () => {
+    const open = box.hidden; box.hidden = !open;
+    btn.setAttribute('aria-expanded', open); btn.textContent = open ? 'Show fewer photos' : 'Show more photos';
+    if (!open) document.getElementById('gallery').scrollIntoView({ block: 'start' });
+  });
+});

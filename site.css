@@ -420,3 +420,12 @@ section { padding: 92px 0; }
 .hero h1.h1-wrap { display: contents; }
 .hero .h1-wrap .eyebrow { line-height: 1.65; }
 .hero .h1-wrap .h1-main { display: block; max-width: 15ch; margin: 0 0 22px; }
+
+/* Domestic gallery: extra photos behind a "Show more photos" button */
+.gextra { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; margin-top: 16px; }
+.gextra[hidden] { display: none; }
+.gextra .gtile { grid-column: span 2; aspect-ratio: 4/3; border-radius: 16px; box-shadow: 0 1px 2px rgba(11,35,65,.06), 0 10px 26px rgba(11,35,65,.10); }
+.gextra .gtile:nth-child(n+4) { grid-column: span 3; aspect-ratio: 16/10; }
+.gmore { display: flex; justify-content: center; margin-top: 30px; }
+.gmore .btn { border: 0; cursor: pointer; font-family: inherit; }
+@media (max-width: 700px) { .gextra { grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; } .gextra .gtile, .gextra .gtile:nth-child(n+4) { grid-column: auto; aspect-ratio: 4/3; border-radius: 12px; } .gextra .gtile:last-child { grid-column: 1 / -1; aspect-ratio: 16/9; } }
